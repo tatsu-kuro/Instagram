@@ -70,11 +70,51 @@
         <!--Image Select View Controller-->
         <scene sceneID="JfM-4T-gbc">
             <objects>
-                <viewController storyboardIdentifier="Image Select" id="3MW-lC-UrT" customClass="ImageSelectViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ImageSelect" id="3MW-lC-UrT" customClass="ImageSelectViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nTj-w1-pDw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfa-Q7-P7j">
+                                <rect key="frame" x="37" y="80" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="imI-Ag-dPe"/>
+                                </constraints>
+                                <state key="normal" title="ライブラリ" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleLibraryButton:" destination="3MW-lC-UrT" eventType="touchUpInside" id="P16-dM-NCy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mYU-FW-Eg6">
+                                <rect key="frame" x="37" y="130" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="scg-7Y-mIQ"/>
+                                </constraints>
+                                <state key="normal" title="カメラ" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCameraButton:" destination="3MW-lC-UrT" eventType="touchUpInside" id="0d7-0q-7w4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfI-8R-toa">
+                                <rect key="frame" x="37" y="180" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="1KI-JS-G3c"/>
+                                </constraints>
+                                <state key="normal" title="キャンセル" backgroundImage="btn"/>
+                                <connections>
+                                    <action selector="handleCancelButton:" destination="3MW-lC-UrT" eventType="touchUpInside" id="8z8-F3-7m8"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mYU-FW-Eg6" firstAttribute="top" secondItem="bfa-Q7-P7j" secondAttribute="bottom" constant="10" id="2Tj-fd-c1w"/>
+                            <constraint firstItem="lfI-8R-toa" firstAttribute="centerX" secondItem="nTj-w1-pDw" secondAttribute="centerX" id="8MB-6H-dhR"/>
+                            <constraint firstItem="lfI-8R-toa" firstAttribute="top" secondItem="mYU-FW-Eg6" secondAttribute="bottom" constant="10" id="EIA-0m-eAS"/>
+                            <constraint firstItem="bfa-Q7-P7j" firstAttribute="top" secondItem="5Bk-df-q4F" secondAttribute="top" constant="60" id="JTC-pb-yey"/>
+                            <constraint firstItem="mYU-FW-Eg6" firstAttribute="centerX" secondItem="nTj-w1-pDw" secondAttribute="centerX" id="eHr-4g-Cj4"/>
+                            <constraint firstItem="bfa-Q7-P7j" firstAttribute="centerX" secondItem="nTj-w1-pDw" secondAttribute="centerX" id="kaU-uC-Jqy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5Bk-df-q4F"/>
                     </view>
                 </viewController>
