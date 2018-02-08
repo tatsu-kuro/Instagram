@@ -14,11 +14,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="552" id="KGk-i7-Jjw" customClass="PostTableViewCell" customModule="Instagram" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="430" height="552"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="736" id="KGk-i7-Jjw" customClass="PostTableViewCell" customModule="Instagram" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="736"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="430" height="551.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="430" height="735.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mgz-4z-m80">
@@ -51,7 +51,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQX-pk-Pcu">
-                        <rect key="frame" x="30" y="491" width="370" height="40"/>
+                        <rect key="frame" x="30" y="694.5" width="370" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -64,35 +64,45 @@
                         </constraints>
                         <state key="normal" image="fukidasi"/>
                     </button>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xcf-mP-aaP">
+                        <rect key="frame" x="30" y="491" width="370" height="193.5"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="RQX-pk-Pcu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="4hc-iH-v9s"/>
+                    <constraint firstItem="RQX-pk-Pcu" firstAttribute="top" secondItem="Xcf-mP-aaP" secondAttribute="bottom" constant="10" id="1th-ar-mOw"/>
                     <constraint firstItem="tIn-rA-lND" firstAttribute="leading" secondItem="8HF-uu-jXa" secondAttribute="trailing" constant="10" id="5Pd-TH-ifP"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="RQX-pk-Pcu" secondAttribute="bottom" constant="10" id="5tc-N5-x8H"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Xcf-mP-aaP" secondAttribute="trailing" constant="10" id="Apl-Oe-5ge"/>
                     <constraint firstItem="Ezb-qW-KMX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="GL4-tF-Y4o"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="RQX-pk-Pcu" secondAttribute="bottom" constant="10" id="HuD-Uv-1Ap"/>
                     <constraint firstItem="Mgz-4z-m80" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="IYh-Pb-4xo"/>
+                    <constraint firstItem="RQX-pk-Pcu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="MwG-Ei-TXD"/>
+                    <constraint firstItem="Xcf-mP-aaP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="VsJ-Ek-cKP"/>
                     <constraint firstItem="tIn-rA-lND" firstAttribute="centerY" secondItem="Ezb-qW-KMX" secondAttribute="centerY" id="dYp-mD-LHP"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="RQX-pk-Pcu" secondAttribute="trailing" constant="10" id="efW-wH-zuY"/>
                     <constraint firstItem="tIn-rA-lND" firstAttribute="leading" secondItem="8HF-uu-jXa" secondAttribute="trailing" constant="10" id="flq-Ml-jjE"/>
                     <constraint firstItem="CZD-Om-6Zs" firstAttribute="centerY" secondItem="Ezb-qW-KMX" secondAttribute="centerY" id="l9c-N9-Ogt"/>
                     <constraint firstItem="Mgz-4z-m80" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="qH5-J4-GC7"/>
                     <constraint firstItem="Ezb-qW-KMX" firstAttribute="top" secondItem="Mgz-4z-m80" secondAttribute="bottom" constant="10" id="rOo-mB-J8u"/>
                     <constraint firstItem="8HF-uu-jXa" firstAttribute="centerY" secondItem="Ezb-qW-KMX" secondAttribute="centerY" id="rlA-iG-DQ5"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="RQX-pk-Pcu" secondAttribute="trailing" constant="10" id="rpy-6X-aXn"/>
                     <constraint firstItem="8HF-uu-jXa" firstAttribute="leading" secondItem="Ezb-qW-KMX" secondAttribute="trailing" constant="10" id="tBZ-Ra-XTE"/>
-                    <constraint firstItem="RQX-pk-Pcu" firstAttribute="top" secondItem="Ezb-qW-KMX" secondAttribute="bottom" constant="10" id="tbB-mR-SJE"/>
                     <constraint firstItem="Mgz-4z-m80" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="vOo-u1-H2y"/>
+                    <constraint firstItem="Xcf-mP-aaP" firstAttribute="top" secondItem="Ezb-qW-KMX" secondAttribute="bottom" constant="10" id="xXb-SR-wQx"/>
                     <constraint firstAttribute="trailingMargin" secondItem="CZD-Om-6Zs" secondAttribute="trailing" constant="10" id="zZ4-4S-YAr"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="captionLabel" destination="RQX-pk-Pcu" id="oFT-jh-o0d"/>
+                <outlet property="commentButton" destination="tIn-rA-lND" id="YF4-JW-LNw"/>
                 <outlet property="dateLabel" destination="CZD-Om-6Zs" id="vF0-iD-RDM"/>
                 <outlet property="likeButton" destination="Ezb-qW-KMX" id="Hf0-Q9-AMO"/>
                 <outlet property="likeLabel" destination="8HF-uu-jXa" id="Mnr-dA-NOv"/>
                 <outlet property="postImageView" destination="Mgz-4z-m80" id="GCH-FZ-zBG"/>
             </connections>
-            <point key="canvasLocation" x="199" y="340"/>
+            <point key="canvasLocation" x="199" y="432"/>
         </tableViewCell>
     </objects>
     <resources>
