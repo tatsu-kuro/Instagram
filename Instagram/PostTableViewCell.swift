@@ -19,6 +19,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     
+    @IBOutlet weak var captionLabel_top: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
