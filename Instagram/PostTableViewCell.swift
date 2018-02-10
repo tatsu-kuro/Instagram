@@ -11,14 +11,13 @@ import UIKit
 class PostTableViewCell: UITableViewCell {
     
 
-   
+    @IBOutlet weak var commentField: UITextField!
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var commentButton: UIButton!
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
-    
     @IBOutlet weak var captionLabel_top: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,11 +29,21 @@ class PostTableViewCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
-    
+
     func setPostData(_ postData: PostData) {
         self.postImageView.image = postData.image
-        
-        self.captionLabel.text = "\(postData.name!) : \(postData.caption!)"
+        let all_caption = postData.caption!
+        print("debug_setpostData ")
+        if let indexn = all_caption.index(of: "\n") {
+            print("debug_setpostData main")
+            let indexnA = all_caption.index(indexn, offsetBy:1)
+            let indexnB = all_caption.index(indexn, offsetBy:-1)
+            self.captionLabel_top.text = "\(postData.name!) : \(all_caption[...indexnB])"
+            self.captionLabel.text = "\(all_caption[indexnA...])"
+        }else{
+            print("debug_setpostData else ")
+          self.captionLabel_top.text = "\(postData.name!) : \(postData.caption!)"
+        }
         let likeNumber = postData.likes.count
         likeLabel.text = "\(likeNumber)"
         

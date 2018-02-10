@@ -117,6 +117,29 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     @objc func handleButton_comment(_ sender: UIButton, forEvent event: UIEvent){
         print("DEBUG_PRINT: commentボタンがタップされました。")
+        
+        // タップされたセルのインデックスを求める
+        let touch = event.allTouches?.first
+        let point = touch!.location(in: self.tableView)
+        let indexPath = tableView.indexPathForRow(at: point)
+        let cell = tableView.cellForRow(at: indexPath!) as! PostTableViewCell
+        print("debug_print: \(cell.commentField.text!))")
+        if (cell.commentField.text?.count)!<1 {
+            return
+        }
+        // 配列からタップされたインデックスのデータを取り出す
+        let postData = postArray[indexPath!.row]
+       // Firebaseに保存するデータの準備
+        if Auth.auth().currentUser != nil {
+            let name = Auth.auth().currentUser?.displayName
+            postData.caption = postData.caption! + "\n" + name! + ":" + cell.commentField.text!
+            // 増えたlikesをFirebaseに保存する
+            let postRef = Database.database().reference().child(Const.PostPath).child(postData.id!)
+            let commentf = ["caption": postData.caption]
+            postRef.updateChildValues(commentf as Any as! [AnyHashable : Any])
+            cell.commentField.text = ""
+        }
+
     }
     // セル内のボタンがタップされた時に呼ばれるメソッド
     @objc func handleButton(_ sender: UIButton, forEvent event: UIEvent) {

@@ -108,6 +108,7 @@
                 <outlet property="captionLabel" destination="RQX-pk-Pcu" id="oFT-jh-o0d"/>
                 <outlet property="captionLabel_top" destination="fqn-Rb-Hud" id="s7G-hN-gw3"/>
                 <outlet property="commentButton" destination="tIn-rA-lND" id="YF4-JW-LNw"/>
+                <outlet property="commentField" destination="Xcf-mP-aaP" id="ug5-x5-cCH"/>
                 <outlet property="dateLabel" destination="CZD-Om-6Zs" id="vF0-iD-RDM"/>
                 <outlet property="likeButton" destination="Ezb-qW-KMX" id="Hf0-Q9-AMO"/>
                 <outlet property="likeLabel" destination="8HF-uu-jXa" id="Mnr-dA-NOv"/>
