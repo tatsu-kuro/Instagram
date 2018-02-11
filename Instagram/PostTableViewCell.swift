@@ -43,6 +43,7 @@ class PostTableViewCell: UITableViewCell {
         }else{
             print("debug_setpostData else ")
           self.captionLabel_top.text = "\(postData.name!) : \(postData.caption!)"
+            self.captionLabel.text = " "
         }
         let likeNumber = postData.likes.count
         likeLabel.text = "\(likeNumber)"
